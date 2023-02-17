@@ -37,12 +37,27 @@ public class Cart {
         product = addToCart(applePencil2);
         Product.add(product);
 
+        Product headphone = new Product("Headphone",340.03);
+        product = addToCart(headphone);
+        Product.add(product);
+
+        System.out.println(Product);
+
+        removeFromCart(headphone);
+
         System.out.println(Product);
     }
 
 
     public static String addToCart(Product product) {
-        String result = product.quantity + " " + product.name;
+        String result = product.name;
         return result;
+    }
+
+    public static void removeFromCart(Product product) {
+        for(int i = 0; i < Product.size(); i++) {
+            if(Product.get(i).equals(product.name) )
+                Product.remove(i);
+        }
     }
 }
