@@ -3,23 +3,6 @@
 // add 2 apple pencil to cart
 import java.util.*;
 
-class Product {
-    double price;
-    String name;
-    int quantity = 1;
-
-    public Product(String name, double price) {
-        this.price = price;
-        this.name = name;
-    }
-
-    public Product(String name, double price, int quantity) {
-        this.price = price;
-        this.name = name;
-        this.quantity = quantity;
-    }
-
-}
 
 public class Cart {
     public static ArrayList<String> Product = new ArrayList<String>();
@@ -60,4 +43,6 @@ public class Cart {
                 Product.remove(i);
         }
     }
+
+
 }
